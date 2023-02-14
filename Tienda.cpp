@@ -41,6 +41,9 @@ string Tienda::toString() {
 
 Tienda::~Tienda() {
 
+	delete this->nombre;
+	delete this->direccion;
+
 	for (Prenda* prenda : prendas) {
 		delete prenda;
 	}
