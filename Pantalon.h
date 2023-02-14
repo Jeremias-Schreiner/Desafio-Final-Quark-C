@@ -9,6 +9,9 @@ private:
 public:
 	using Prenda::Prenda;
 
+	string getTipo();
+
+	virtual string getTipoPrenda();
 	virtual double getPrecio(int cantidad);
 	void setTipo(TipoPantalon* tipo);
 

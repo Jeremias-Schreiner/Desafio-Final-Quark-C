@@ -1,0 +1,1 @@
+#include "MangasTipo.h"

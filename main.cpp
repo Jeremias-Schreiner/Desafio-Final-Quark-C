@@ -2,6 +2,7 @@
 #include<locale.h>
 #include<iomanip>
 
+
 #include "Tienda.h"	
 #include "Vendedor.h"
 #include "Prenda.h"
@@ -28,7 +29,9 @@ int main() {
 	pantalon->setTipo(new PantalonNormal());
 
 	cout << pantalon->toString() << endl;
-	cout << setprecision(17) << pantalon->getPrecio(500);
+	cout << setprecision(17) << pantalon->getPrecio(800);
+
+
 
 	delete pantalon;
 	delete tienda;

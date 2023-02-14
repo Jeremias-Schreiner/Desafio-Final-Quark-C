@@ -3,13 +3,20 @@
 
 using namespace std;
 
+string Pantalon::getTipo() {
+	return tipo->toString();
+}
+
+string Pantalon::getTipoPrenda() {
+	return "Pantalon";
+}
+
 double Pantalon::getPrecio(int cantidad) {
 	
 	if (cantidad <= cantidadStock) {
 		double precio = precioUnitario + precioUnitario * tipo->getDescuento();
 		if ( calidad->compare("Premium") == 0) {
 			precio = precio + precio * 0.3;
-			return precio * cantidad;
 		}
 		return precio * cantidad;
 	}

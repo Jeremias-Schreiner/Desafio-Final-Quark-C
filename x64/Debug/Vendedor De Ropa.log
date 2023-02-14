@@ -1,3 +1,15 @@
-﻿  main.cpp
-C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\main.cpp(8,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-  Vendedor De Ropa.vcxproj -> C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\x64\Debug\Vendedor De Ropa.exe
+﻿  Camisa.cpp
+  MangaCorta.cpp
+  MangasLargas.cpp
+  Pantalon.cpp
+  main.cpp
+C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\main.cpp(9,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\main.cpp(17,29): error C2661: 'Tienda::Tienda': ninguna función sobrecargada acepta 2 argumentos
+C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\main.cpp(17,29): message : al hacer coincidir la lista de argumentos '(std::string *, std::string *)'
+  Tienda.cpp
+C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\Tienda.cpp(19,17): error C2589: '(': símbolo (token) no válido en el lado derecho de '::'
+C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\Tienda.cpp(19,17): error C2062: tipo 'unknown-type' inesperado
+C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\Tienda.cpp(19,24): error C2059: error de sintaxis: ')'
+C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\Tienda.cpp(23,40): error C2143: error de sintaxis: falta ';' delante de '{'
+C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\Tienda.cpp(23,40): error C2447: '{': falta el encabezado de función (¿lista formal de estilo anterior?)
+  Generando código...

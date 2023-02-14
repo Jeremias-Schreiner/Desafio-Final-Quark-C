@@ -2,7 +2,10 @@
 #include<string>
 #include<vector>
 
-#include"Prenda.h"
+//#include"Prenda.h"
+#include"Vendedor.h"
+#include "Camisa.h"
+#include "Pantalon.h"
 
 
 using namespace std;
@@ -12,12 +15,14 @@ private:
 	string* nombre;
 	string* direccion;
 	vector<Prenda*> prendas;
+	Vendedor* vendedor;
 public:
-	Tienda(string* nombre, string* direccion);
+	Tienda(string* nombre, string* direccion, Vendedor* vendedor);
 
 	string* getNombre() const;
 	string* getDireccion() const;
-	vector<Prenda*> getPrendas() const;
+	Camisa* getCamisa(string* mangas, string* cuello) const;
+	Pantalon* getPantalon(string* tipo) const;
 
 	void setNombre(string* nombre);
 	void setDireccion(string* direccion);

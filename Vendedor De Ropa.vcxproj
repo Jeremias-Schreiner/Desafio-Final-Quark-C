@@ -127,7 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Camisa.h" />
     <ClInclude Include="Chupin.h" />
+    <ClInclude Include="Cotizacion.h" />
+    <ClInclude Include="CuelloComun.h" />
+    <ClInclude Include="CuelloMao.h" />
+    <ClInclude Include="CuelloTipo.h" />
+    <ClInclude Include="MangaCorta.h" />
+    <ClInclude Include="MangasLargas.h" />
+    <ClInclude Include="MangasTipo.h" />
     <ClInclude Include="Pantalon.h" />
     <ClInclude Include="PantalonNormal.h" />
     <ClInclude Include="Prenda.h" />
@@ -136,7 +144,14 @@
     <ClInclude Include="Vendedor.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Camisa.cpp" />
     <ClCompile Include="Chupin.cpp" />
+    <ClCompile Include="Cotizacion.cpp" />
+    <ClCompile Include="CuelloComun.cpp" />
+    <ClCompile Include="CuelloMao.cpp" />
+    <ClCompile Include="MangaCorta.cpp" />
+    <ClCompile Include="MangasLargas.cpp" />
+    <ClCompile Include="MangasTipo.cpp" />
     <ClCompile Include="Pantalon.cpp" />
     <ClCompile Include="PantalonNormal.cpp" />
     <ClCompile Include="Prenda.cpp" />

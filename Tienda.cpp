@@ -1,8 +1,9 @@
 #include "Tienda.h"
-Tienda::Tienda(string* nombre, string* direccion) {
+Tienda::Tienda(string* nombre, string* direccion, Vendedor* vendedor) {
 	this->nombre = nombre;
 	this->direccion = direccion;
 	this->prendas = {};
+	this->vendedor = vendedor;
 }
 
 //getters
@@ -15,8 +16,33 @@ string* Tienda::getDireccion() const{
 	return this->direccion;
 }
 
-vector<Prenda*> Tienda::getPrendas() const{
-	return this->prendas;
+Camisa* Tienda::getCamisa(string* mangas, string* cuello) const{
+	for (Prenda* prenda : prendas) {
+		if (prenda->getTipoPrenda().compare("Camisa") == 0) {
+			Camisa* camisa = (Camisa*)&prenda;
+			if (mangas->compare(camisa->getMangas()) == 0) {
+				if (cuello->compare(camisa->getCuello()) == 0){
+					return camisa;
+				}
+			}
+		}
+	}
+	return NULL;
+}
+
+Pantalon* Tienda::getPantalon(string* tipo) const {
+	for (Prenda* prenda : prendas) {
+
+		if (prenda->getTipoPrenda().compare("Pantalon")) {
+			Pantalon* pantalon = (Pantalon*)&prenda;
+			if (tipo->compare(pantalon->getTipo()) == 0) {
+				return pantalon;
+			}
+		}
+
+	}
+
+	return NULL;
 }
 
 //setters
@@ -47,5 +73,5 @@ Tienda::~Tienda() {
 	for (Prenda* prenda : prendas) {
 		delete prenda;
 	}
-
+	delete vendedor;
 }
