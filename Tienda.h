@@ -21,8 +21,9 @@ public:
 
 	string* getNombre() const;
 	string* getDireccion() const;
-	Camisa* getCamisa(string* mangas, string* cuello) const;
-	Pantalon* getPantalon(string* tipo) const;
+	Camisa* getCamisa(string* mangas, string* cuello, string* calidad) const;
+	Pantalon* getPantalon(string* tipo, string* calidad) const;
+	Vendedor* getVendedor() const;
 
 	void setNombre(string* nombre);
 	void setDireccion(string* direccion);

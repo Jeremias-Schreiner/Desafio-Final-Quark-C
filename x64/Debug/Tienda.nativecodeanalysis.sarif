@@ -1,0 +1,99 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/tienda.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "9d807c7d417e3729d8c7d1fbae7930919b78a4e43621bb5d7baf83af55ec04bb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/tienda.h"
+          },
+          "hashes": {
+            "sha-256": "840569a65e60129cd08977a6083b4e7a7d2ecb275b816642f0f83812116ff07d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/vendedor.h"
+          },
+          "hashes": {
+            "sha-256": "5ce0e99f2b3019b1ebf05c036024f7838ca682a153f37bd71afb3163281a620e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/camisa.h"
+          },
+          "hashes": {
+            "sha-256": "5a14311fd5510fb0520abd4281d77e202a57058430b42cfcc49920b9b4666207"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/prenda.h"
+          },
+          "hashes": {
+            "sha-256": "50ba444f62da25155fc6f45433c8c4c7c6b0d33a323512398a34f0aa06ba0d42"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/mangastipo.h"
+          },
+          "hashes": {
+            "sha-256": "e576a65b95ed03811f0034db4cb927696a7bfb5732fd5656dab235cf6e00a05d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/cuellotipo.h"
+          },
+          "hashes": {
+            "sha-256": "a7cb939662a1f2f4735669fdbabf68f27f1609d46afb72f173d1770d713f4b90"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/pantalon.h"
+          },
+          "hashes": {
+            "sha-256": "28f8bca7e195963db2b46fd698edab04ee32e5b1ea0011462fe46969774a9044"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/tipopantalon.h"
+          },
+          "hashes": {
+            "sha-256": "e74b1bf37e443f1ce373f9264c18537502e57c0091f872c22de72141aba3e515"
+          }
+        }
+      ]
+    }
+  ]
+}

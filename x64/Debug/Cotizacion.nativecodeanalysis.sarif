@@ -1,0 +1,59 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/cotizacion.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "c8364b69576274ea6e49748b24193ed8c1cfab751bf12bf088aed3a5fa6c96d3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/cotizacion.h"
+          },
+          "hashes": {
+            "sha-256": "6d0a4550dc7505e76198f438dd3350a681345ac99e7da3d85eda75241aad2712"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/vendedor.h"
+          },
+          "hashes": {
+            "sha-256": "5ce0e99f2b3019b1ebf05c036024f7838ca682a153f37bd71afb3163281a620e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/prenda.h"
+          },
+          "hashes": {
+            "sha-256": "50ba444f62da25155fc6f45433c8c4c7c6b0d33a323512398a34f0aa06ba0d42"
+          }
+        }
+      ]
+    }
+  ]
+}

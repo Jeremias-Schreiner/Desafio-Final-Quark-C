@@ -1,14 +1,42 @@
-#include "Cotizacion.h"
 #include<string>
+#include "Cotizacion.h"
+#include"Date.h"
+#include"stdexcept"
+#include <iostream>
 
 using namespace std;
 
-int Cotizacion::incremeto=0;
+int Cotizacion::incremeto = 0;
+vector<Cotizacion*> Cotizacion::cotizaciones = {};
+
+Cotizacion::Cotizacion(Vendedor* vendedor, Prenda* prenda, int cantidadUnidades) {
+
+
+	this->vendedor = vendedor;
+	this->prenda = prenda;
+	this->cantidadUnidades = cantidadUnidades;
+	Date d;
+	this->fecha = d.getCurrentDate();
+
+	if (cantidadUnidades <= 0) {
+		throw invalid_argument("Una cotizacion no puede tener valores Negativos ni 0!");
+	}
+	else if(cantidadUnidades > prenda->getCantidadStock()) {
+		cout << "aca?" <<endl;
+		throw invalid_argument("No hay suficientes productos en stock!");
+	}
+
+	this->calculo = prenda->getPrecio(cantidadUnidades);
+	
+	incremeto++;
+	numeroCotizacion = incremeto;
+	cotizaciones.push_back(this);
+}
 
 string Cotizacion::formateadorNumerico(int numero) {
 	string numeroString = to_string(numero);
 	if (numeroString.size() == 1) {
-		numeroString = "00" + numero;
+		numeroString = "00" + numeroString;
 	}
 	else if (numeroString.size() == 2) {
 		numeroString = "0" + numeroString;
@@ -16,30 +44,33 @@ string Cotizacion::formateadorNumerico(int numero) {
 	return numeroString;
 }
 
-Cotizacion::Cotizacion(Vendedor* vendedor, Prenda* prenda, int cantidadUnidades) {
-	incremeto++;
+string Cotizacion::toMonetaryString(double value) {
+	string resultado = "";
 
-	numeroCotizacion = incremeto;
+	int valueInt = value;
+	resultado = to_string(valueInt);
 
-	this->vendedor = vendedor;
-	this->prenda = prenda;
-	this->cantidadUnidades = cantidadUnidades;
+	int decimal = (value - valueInt) *100;
+	 
+	if (decimal < 10 && decimal > 0) {
+		resultado += ".0" + to_string(decimal);
+	}
+	else if (decimal % 10 == 0 && decimal != 0) {
+		resultado += '.' + to_string(decimal);
+	}
 
-	this->calculo = prenda->getPrecio(cantidadUnidades);
-
-	cotizaciones.push_back(this);
+	return resultado;
 }
 
 string Cotizacion::toString() {
 	return "Número de identificación: " + formateadorNumerico(numeroCotizacion)+"\n"
-		+"Fecha y hora de la cotización: 18/01/2022 15:30"+"\n"
+		+"Fecha y hora de la cotización: "+fecha+"\n"
 		+"Código del Vendedor: " + formateadorNumerico(vendedor->getCodigo()) + "\n"
 		+"Prenda cotizada: "+prenda->toString() + "\n"
-		+"Precio unitario: $"+to_string(prenda->getPrecioUnitario())+"\n"
+		+"Precio unitario: $"+ toMonetaryString(prenda->getPrecioUnitario())+"\n"
 		+"Cantidad de unidades cotizadas: "+ to_string(cantidadUnidades)+'\n'
-		+"Precio Final: $" + to_string(calculo);
+		+"Precio Final: $" + toMonetaryString(calculo);
 }
-
 
 Cotizacion::~Cotizacion() {
 	for (Cotizacion* c : cotizaciones) {

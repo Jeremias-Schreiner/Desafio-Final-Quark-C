@@ -11,13 +11,14 @@ private:
 	static int incremeto;
 
 	int numeroCotizacion;
-	//fecha
+	string fecha;
 	Vendedor* vendedor;
 	Prenda* prenda;
 	int cantidadUnidades;
 	double calculo;
 
 	string formateadorNumerico(int numero);
+	string toMonetaryString(double value);
 
 public:
 

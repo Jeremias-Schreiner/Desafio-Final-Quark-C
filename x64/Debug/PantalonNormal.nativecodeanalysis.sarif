@@ -1,0 +1,51 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/pantalonnormal.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "0821ee90f2382e2ea86f7b9624435a51a4d9edfa784892aae6b62338f992db32"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/pantalonnormal.h"
+          },
+          "hashes": {
+            "sha-256": "198e8a6e8d6f5ea05467e7ffadbb288bab9152815d5b5ca66a071ba94d0ebfca"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/tipopantalon.h"
+          },
+          "hashes": {
+            "sha-256": "e74b1bf37e443f1ce373f9264c18537502e57c0091f872c22de72141aba3e515"
+          }
+        }
+      ]
+    }
+  ]
+}

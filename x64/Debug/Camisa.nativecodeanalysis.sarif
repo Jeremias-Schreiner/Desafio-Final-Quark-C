@@ -1,0 +1,67 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/camisa.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "4f4ceb4eed5e8ed7f8f90e0e19a87b26477ca087b26b9e93f9fd735f5c482db6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/camisa.h"
+          },
+          "hashes": {
+            "sha-256": "5a14311fd5510fb0520abd4281d77e202a57058430b42cfcc49920b9b4666207"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/prenda.h"
+          },
+          "hashes": {
+            "sha-256": "50ba444f62da25155fc6f45433c8c4c7c6b0d33a323512398a34f0aa06ba0d42"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/mangastipo.h"
+          },
+          "hashes": {
+            "sha-256": "e576a65b95ed03811f0034db4cb927696a7bfb5732fd5656dab235cf6e00a05d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/cuellotipo.h"
+          },
+          "hashes": {
+            "sha-256": "a7cb939662a1f2f4735669fdbabf68f27f1609d46afb72f173d1770d713f4b90"
+          }
+        }
+      ]
+    }
+  ]
+}

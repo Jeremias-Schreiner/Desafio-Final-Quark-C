@@ -16,6 +16,12 @@ public:
 	virtual double getPrecioUnitario() {
 		return precioUnitario;
 	}
+	virtual int getCantidadStock() {
+		return cantidadStock;
+	}
+	virtual string getCaliad() {
+		return *calidad;
+	}
 	virtual ~Prenda() {
 		delete calidad;
 	};

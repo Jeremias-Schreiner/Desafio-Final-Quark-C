@@ -1,0 +1,51 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/mangaslargas.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "bc3aa901587236141cfd34c2ba09ff48445be1f332c2bd4be8c17b01b05a205e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/mangaslargas.h"
+          },
+          "hashes": {
+            "sha-256": "8ae257385eeb46b93f45655b2b2d0dd27b2d5fd0e22b0b03e046013bb7799680"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/mangastipo.h"
+          },
+          "hashes": {
+            "sha-256": "e576a65b95ed03811f0034db4cb927696a7bfb5732fd5656dab235cf6e00a05d"
+          }
+        }
+      ]
+    }
+  ]
+}

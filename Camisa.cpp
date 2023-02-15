@@ -1,21 +1,17 @@
 #include "Camisa.h"
+#include<iostream>
 
 double Camisa::getPrecio(int cantidad) {
-	if (cantidad <= cantidadStock) {
-		double precio = precioUnitario + precioUnitario * mangas->getDescuento();
-		precio = precio + precio * cuello->getDescuento();
+	double precio = precioUnitario + precioUnitario * mangas->getDescuento();
+	precio = precio + precio * cuello->getDescuento();
 
-		if (calidad->compare("Premium") == 0) {
-			precio = precio + precio * 0.3;
-		}
-		return precio * cantidad;
+	if (calidad->compare("Premium") == 0) {
+		precio = precio + precio * 0.3;
 	}
-	else {
-		return 0;
-	}
+	return precio * cantidad;
 }
 
-string Camisa::getTipoPrenda() const{
+string Camisa::getTipoPrenda(){
 	return "Camisa";
 }
 
@@ -36,7 +32,7 @@ void Camisa::setTipoMangas(MangasTipo* mangas) {
 }
 
 string Camisa::toString() {
-	return "Camisa - Mangas " + mangas->toString() + " - " + "Cuello" + cuello->toString();
+	return "Camisa - Mangas " + mangas->toString() + " - " + "Cuello " + cuello->toString() + " - "+ *this->calidad;
 }
 
 Camisa::~Camisa() {

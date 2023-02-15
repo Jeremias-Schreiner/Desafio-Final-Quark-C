@@ -3,7 +3,7 @@
 const double PantalonNormal::descuento = 0;
 
 string PantalonNormal::toString() {
-	return "Nomal";
+	return "Normal";
 }
 
 double PantalonNormal::getDescuento() {

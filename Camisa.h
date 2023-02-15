@@ -2,7 +2,7 @@
 #include"Prenda.h"
 #include "MangasTipo.h"
 #include "CuelloTipo.h"
-class Camisa:Prenda{
+class Camisa:public Prenda{
 private:
 	MangasTipo* mangas;
 	CuelloTipo* cuello;
@@ -10,14 +10,14 @@ public:
 	using Prenda::Prenda;
 
 	virtual double getPrecio(int cantidad);
-	virtual string getTipoPrenda() const;
+	virtual string getTipoPrenda();
 	string getMangas() const;
 	string getCuello() const;
 
 	void setTipoMangas(MangasTipo* manga);
 	void setTipoCuello(CuelloTipo* cuello);
 
-	string toString();
+	virtual string toString();
 
 	~Camisa();
 };

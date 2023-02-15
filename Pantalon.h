@@ -15,7 +15,7 @@ public:
 	virtual double getPrecio(int cantidad);
 	void setTipo(TipoPantalon* tipo);
 
-	string toString();
+	virtual string toString();
 
 	~Pantalon();
 

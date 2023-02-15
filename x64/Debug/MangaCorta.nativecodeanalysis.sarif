@@ -1,0 +1,51 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/mangacorta.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "011c1a0112474e5e4d82e1df1a598ac2c0dc952c49d9fdf07f7ae5be22ada669"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/mangacorta.h"
+          },
+          "hashes": {
+            "sha-256": "1a76d432a204400f2b54fba4137120fbf8fa7fc6ecdce24995266c389550da4c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/jerem/onedrive/escritorio/desafio-final-quark-c-/mangastipo.h"
+          },
+          "hashes": {
+            "sha-256": "e576a65b95ed03811f0034db4cb927696a7bfb5732fd5656dab235cf6e00a05d"
+          }
+        }
+      ]
+    }
+  ]
+}

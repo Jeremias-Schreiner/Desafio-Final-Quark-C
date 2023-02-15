@@ -12,17 +12,11 @@ string Pantalon::getTipoPrenda() {
 }
 
 double Pantalon::getPrecio(int cantidad) {
-	
-	if (cantidad <= cantidadStock) {
-		double precio = precioUnitario + precioUnitario * tipo->getDescuento();
-		if ( calidad->compare("Premium") == 0) {
-			precio = precio + precio * 0.3;
-		}
-		return precio * cantidad;
+	double precio = precioUnitario + precioUnitario * tipo->getDescuento();
+	if ( calidad->compare("Premium") == 0) {
+		precio = precio + precio * 0.3;
 	}
-	else {
-		return 0;
-	}
+	return precio * cantidad;
 }
 
 void Pantalon::setTipo(TipoPantalon* tipo) {
