@@ -29,5 +29,9 @@ public:
 		return cotizaciones;
 	}
 
-	~Cotizacion();
+	static void staticDestructor() {
+		for (Cotizacion* c : cotizaciones) {
+			delete c;
+		}
+	};
 };

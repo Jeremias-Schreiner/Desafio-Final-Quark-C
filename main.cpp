@@ -124,25 +124,20 @@ int main() {
 	);
 
 	pantalon = tienda->getPantalon(new string("Normal"), new string("Premium"));
-	cout << pantalon << endl;
-	cout << camisa->toString() << endl;
-	cout << tienda->toString() << endl;
-	cout << pantalon->toString() << endl;
-	cout << endl;
-
-	
 
 	Cotizacion* cotizacion = new Cotizacion(tienda->getVendedor(), pantalon, 100);
 
 	Cotizacion* cotizacion2 = new Cotizacion(tienda->getVendedor(), camisa, 24);
 
+	Cotizacion* cotizacion3 = new Cotizacion(tienda->getVendedor(), camisa, 48);
 
 
-	cout << setprecision(2) << fixed<< cotizacion->toString() << endl;
-	cout << endl;
-	cout << cotizacion2->toString() << endl;
+	for (Cotizacion* c : Cotizacion::getCotizaciones()) {
+		cout << c->toString()+"\n" << endl;
+	}
 
-	delete tienda;
+	delete tienda; 
+	Cotizacion::staticDestructor();
 
 	return 0;
 }

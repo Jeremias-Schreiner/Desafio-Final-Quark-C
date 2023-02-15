@@ -71,9 +71,3 @@ string Cotizacion::toString() {
 		+"Cantidad de unidades cotizadas: "+ to_string(cantidadUnidades)+'\n'
 		+"Precio Final: $" + toMonetaryString(calculo);
 }
-
-Cotizacion::~Cotizacion() {
-	for (Cotizacion* c : cotizaciones) {
-		delete c;
-	}
-}

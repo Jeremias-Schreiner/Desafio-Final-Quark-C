@@ -1,5 +1,4 @@
 #include "Camisa.h"
-#include<iostream>
 
 double Camisa::getPrecio(int cantidad) {
 	double precio = precioUnitario + precioUnitario * mangas->getDescuento();

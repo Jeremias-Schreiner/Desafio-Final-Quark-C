@@ -1,5 +1,4 @@
 #include "Tienda.h"
-#include<iostream>
 
 using namespace std;
 
@@ -24,7 +23,6 @@ Camisa* Tienda::getCamisa(string* mangas, string* cuello, string* calidad) const
 	for (Prenda* prenda : prendas) {
 		if (prenda->getTipoPrenda().compare("Camisa") == 0) {
 			Camisa* camisa = (Camisa*)prenda;
-			cout << camisa->toString() << endl;
 			if (mangas->compare(camisa->getMangas()) == 0) {
 				if (cuello->compare(camisa->getCuello()) == 0){
 					if (calidad->compare(camisa->getCaliad()) == 0) {
