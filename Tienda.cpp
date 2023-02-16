@@ -23,7 +23,6 @@ string* Tienda::getDireccion() const{
 Camisa* Tienda::getCamisa(string* mangas, string* cuello, string* calidad) const{
 
 	for (Prenda* prenda : prendas) {
-		cout << prenda->getCalidad();
 		if (prenda->getTipoPrenda().compare("Camisa") == 0) {
 			Camisa* camisa = (Camisa*)prenda;
 			if (mangas->compare(camisa->getMangas()) == 0) {

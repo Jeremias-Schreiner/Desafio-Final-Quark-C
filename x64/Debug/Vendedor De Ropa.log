@@ -1,3 +1,5 @@
 ﻿  ConsoleView.cpp
 C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\Presentador.h(2,9): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\ConsoleView.cpp(188,24): error C3867: 'ConsoleView::backButton': sintaxis no estándar; utilice '&' para crear un puntero al miembro
+  CuelloMao.cpp
+  Generando código...
+  Vendedor De Ropa.vcxproj -> C:\Users\jerem\OneDrive\Escritorio\Desafio-Final-Quark-C-\x64\Debug\Vendedor De Ropa.exe

@@ -69,6 +69,7 @@ void ConsoleView::historialMenu(){
 	}
 }
 
+
 void ConsoleView::cotizacionPrendaMenu() {
 	char input;
 	cout << backButton();
@@ -80,7 +81,7 @@ void ConsoleView::cotizacionPrendaMenu() {
 	cin.get();
 	limpiarPantalla();
 	if (input == '1') {
-
+		cotizacionCamisa();
 	}
 	else if (input == '2') {
 		cotizacionPantalon();
@@ -89,6 +90,159 @@ void ConsoleView::cotizacionPrendaMenu() {
 		menuPrincipal();
 	}
 	else {
+		errorMenu();
+	}
+}
+
+
+void ConsoleView::cotizacionCamisa() {
+
+	char input;
+
+	cout << cotizadorExpress() << endl;
+	cout << backButton();
+	cout << "PASO 2.a: La camisa a cotizar, ¿Es Manga corta?" << endl;
+	cout << "1) Sí" << endl;
+	cout << "2) No" << endl;
+	cout << separador();
+	cin >> input;
+	limpiarPantalla();
+	if (input == '1') {
+		cotizacionCamisaCuello("Cortas");
+	}
+	else if (input == '2'){
+		cotizacionCamisaCuello("Largas");
+	}
+	else if (input == '3') {
+		menuPrincipal();
+	}
+	else {
+		errorMenu();
+	}
+
+}
+
+void ConsoleView::cotizacionCamisaCuello(string manga) {
+
+	char input;
+
+	cout << cotizadorExpress() << endl;
+	cout << backButton();
+	cout << "PASO 2.b: La camisa a cotizar, ¿Es Cuello Mao?" << endl;
+	cout << "1) Sí" << endl;
+	cout << "2) No" << endl;
+	cout << separador();
+
+	cin >> input;
+	limpiarPantalla();
+	if (input == '1') {
+		cotizacionCamisaCalidad(manga, "Mao");
+	}
+	else if (input == '2') {
+		cotizacionCamisaCalidad(manga, "Comun");
+	}
+	else if (input == '3') {
+		menuPrincipal();
+	}
+	else {
+		errorMenu();
+	}
+
+}
+
+void ConsoleView::cotizacionCamisaCalidad(string manga, string cuello) {
+
+	char input;
+
+	cout << cotizadorExpress() << endl;
+	cout << backButton() << endl;
+	cout << "PASO 3: Seleccione la calidad de la prenda" <<endl;
+	cout << "1) Standard" << endl;
+	cout << "2) Premium" << endl;
+
+	cin >> input;
+	limpiarPantalla();
+	if (input == '1') {
+		cotizacionCamisaPrecioUnitario(manga, cuello, "Standar");
+	}
+	else if (input == '2') {
+		cotizacionCamisaPrecioUnitario(manga, cuello, "Premium");
+	}
+	else if (input == '3') {
+		menuPrincipal();
+	}
+	else {
+		errorMenu();
+	}
+
+}
+
+void ConsoleView::cotizacionCamisaPrecioUnitario(string manga, string cuello, string calidad) {
+
+	double input;
+
+	cout << cotizadorExpress() << endl;
+	cout << backButton();
+	cout << "PASO 4: Ingrese el precio unitario de la prenda a cotizar" << endl;
+	cout << separador();
+
+	if (cin >> input) {
+		limpiarPantalla();
+		if (input >= 0) {
+			if (input == 3) menuPrincipal();
+			cotizacionCamisaUnidades(manga, cuello, calidad, input);
+		}
+		else {
+			errorMenu();
+		}
+	}
+	else {
+		limpiarPantalla();
+		cin.clear();
+		cin.get();
+		errorMenu();
+	}
+
+}
+
+void ConsoleView::cotizacionCamisaUnidades(string manga, string cuello, string calidad, double precioUnitario) {
+	
+	int valor;
+
+	cout << "Calidad: " << calidad;
+	cout << cotizadorExpress() << endl;
+	cout << backButton()<<endl;
+	cout << "INFORMACIÓN:" << endl;
+	cout << "EXISTE " << presentador->getStock("Camisa", manga, calidad, precioUnitario, cuello) << " CANTIDAD DE UNIDADES EN STOCK DE LA PRENDA SELECCIONADA" << endl;
+	cout << "PASO 5: Ingrese la cantidad de unidades a cotizar" << endl;
+	cout << separador();
+	if (cin >> valor) {
+		if (valor == 3) {
+			limpiarPantalla();
+			menuPrincipal();
+		}
+		else if (valor > 0) {
+			limpiarPantalla();
+			try {
+				cotizacionMenuFinal(presentador->cotizar(valor));
+			}
+			catch (invalid_argument& e) {
+				limpiarPantalla();
+				cout << backButton() << endl;
+				cout << e.what() << endl;
+				cin >> valor;
+				limpiarPantalla();
+				menuPrincipal();
+			}
+		}
+		else {
+			errorMenu();
+		}
+	}
+	else {
+		cin.clear();
+		limpiarPantalla();
+		cin.get();
 		errorMenu();
 	}
 }

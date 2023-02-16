@@ -1,6 +1,6 @@
 #include "CuelloMao.h"
 
-const double CuelloMao::descuento = 0.30;
+const double CuelloMao::descuento = 0.03;
 
 double CuelloMao::getDescuento() {
 	return descuento;

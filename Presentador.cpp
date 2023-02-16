@@ -132,7 +132,7 @@ double Presentador::getStock(string prendaNombre, string tipo, string calidad, d
 	}
 	else {
 		//Mangas, cuello, calidad
-		this->prendaActual = tienda->getCamisa(&tipo,&cuello, &calidad);
+		this->prendaActual = tienda->getCamisa(new string(tipo),new string(cuello), new string(calidad));
 	}
 	if (prendaActual == NULL) {
 		return -1;

@@ -7,18 +7,27 @@
 
 using namespace std;
 
-class ConsoleView: public IView {
+class ConsoleView : public IView {
 
 private:
 	string currentMenu;
 
 	void menuPrincipal();
 	void historialMenu();
+
 	void cotizacionPrendaMenu();
+
+	void cotizacionCamisa();
+	void cotizacionCamisaCuello(string manga);
+	void cotizacionCamisaCalidad(string manga, string cuello);
+	void cotizacionCamisaPrecioUnitario(string manga, string cuello, string calidad);
+	void cotizacionCamisaUnidades(string manga, string cuello,string calidad, double precioUnitario);
+
 	void cotizacionPantalon();
 	void cotizacionPantalonCalidad(string prendaNombre, string tipo);
 	void cotizacionPantalonPrecioUnitario(string prendaNombre, string tipo, string calidad);
 	void cotizacionUnidades(string prendaNombre, string tipo, string calidad, double precio);
+
 	void cotizacionMenuFinal(string cotizacion);
 	void errorMenu();
 
