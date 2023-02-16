@@ -1,4 +1,5 @@
 #include "Tienda.h"
+#include<iostream>
 
 using namespace std;
 
@@ -20,16 +21,18 @@ string* Tienda::getDireccion() const{
 }
 
 Camisa* Tienda::getCamisa(string* mangas, string* cuello, string* calidad) const{
+
 	for (Prenda* prenda : prendas) {
+		cout << prenda->getCalidad();
 		if (prenda->getTipoPrenda().compare("Camisa") == 0) {
 			Camisa* camisa = (Camisa*)prenda;
 			if (mangas->compare(camisa->getMangas()) == 0) {
 				if (cuello->compare(camisa->getCuello()) == 0){
-					if (calidad->compare(camisa->getCaliad()) == 0) {
-						delete mangas;
-						delete cuello;
-						delete calidad;
-						return camisa;
+					if (calidad->compare(camisa->getCalidad()) == 0) {
+							delete mangas;
+							delete cuello;
+							delete calidad;
+							return camisa;
 					}
 				}
 			}
@@ -42,21 +45,16 @@ Camisa* Tienda::getCamisa(string* mangas, string* cuello, string* calidad) const
 
 Pantalon* Tienda::getPantalon(string* tipo, string* calidad) const {
 	for (Prenda* prenda : prendas) {
-
 		if (prenda->getTipoPrenda().compare("Pantalon") == 0) {
 			Pantalon* pantalon = (Pantalon*)prenda;
 			if (tipo->compare(pantalon->getTipo()) == 0) {
-				if (calidad->compare(pantalon->getCaliad()) == 0) {
-					delete tipo;
-					delete calidad;
-					return pantalon;
+				if (calidad->compare(pantalon->getCalidad()) == 0) {
+						return pantalon;
 				}
 			}
 		}
 
 	}
-	delete tipo;
-	delete calidad;
 	return NULL;
 }
 

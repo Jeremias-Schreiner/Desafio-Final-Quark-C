@@ -22,12 +22,12 @@ Cotizacion::Cotizacion(Vendedor* vendedor, Prenda* prenda, int cantidadUnidades)
 		throw invalid_argument("Una cotizacion no puede tener valores Negativos ni 0!");
 	}
 	else if(cantidadUnidades > prenda->getCantidadStock()) {
-		cout << "aca?" <<endl;
 		throw invalid_argument("No hay suficientes productos en stock!");
 	}
 
+
 	this->calculo = prenda->getPrecio(cantidadUnidades);
-	
+
 	incremeto++;
 	numeroCotizacion = incremeto;
 	cotizaciones.push_back(this);

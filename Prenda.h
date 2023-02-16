@@ -9,7 +9,8 @@ protected:
 	double precioUnitario;
 	int cantidadStock;
 public:
-	Prenda(string* calidad, double precioUnitario, int cantidadStock);
+	Prenda(string* calidad, int cantidadStock);
+	Prenda(string* calidad, int cantidadStock,double precioUnitario);
 	virtual double getPrecio(int cantidad) = 0;
 	virtual string toString() = 0;
 	virtual string getTipoPrenda() = 0;
@@ -19,11 +20,14 @@ public:
 	virtual int getCantidadStock() {
 		return cantidadStock;
 	}
-	virtual string getCaliad() {
+	virtual string getCalidad() {
 		return *calidad;
 	}
 	virtual ~Prenda() {
 		delete calidad;
 	};
+	void setPrecioUnitario(double precio) {
+		this->precioUnitario = precio;
+	}
 };
 

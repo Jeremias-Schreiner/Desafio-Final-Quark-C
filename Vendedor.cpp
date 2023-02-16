@@ -3,7 +3,6 @@
 int Vendedor::incremento = 0;
 
 Vendedor::Vendedor(string* nombre, string* apellido) {
-	
 	incremento++;
 	this->codigo = incremento;
 

@@ -129,17 +129,20 @@
   <ItemGroup>
     <ClInclude Include="Camisa.h" />
     <ClInclude Include="Chupin.h" />
+    <ClInclude Include="ConsoleView.h" />
     <ClInclude Include="Cotizacion.h" />
     <ClInclude Include="CuelloComun.h" />
     <ClInclude Include="CuelloMao.h" />
     <ClInclude Include="CuelloTipo.h" />
     <ClInclude Include="Date.h" />
+    <ClInclude Include="IView.h" />
     <ClInclude Include="MangaCorta.h" />
     <ClInclude Include="MangasLargas.h" />
     <ClInclude Include="MangasTipo.h" />
     <ClInclude Include="Pantalon.h" />
     <ClInclude Include="PantalonNormal.h" />
     <ClInclude Include="Prenda.h" />
+    <ClInclude Include="Presentador.h" />
     <ClInclude Include="Tienda.h" />
     <ClInclude Include="TipoPantalon.h" />
     <ClInclude Include="Vendedor.h" />
@@ -147,17 +150,19 @@
   <ItemGroup>
     <ClCompile Include="Camisa.cpp" />
     <ClCompile Include="Chupin.cpp" />
+    <ClCompile Include="ConsoleView.cpp" />
     <ClCompile Include="Cotizacion.cpp" />
     <ClCompile Include="CuelloComun.cpp" />
     <ClCompile Include="CuelloMao.cpp" />
     <ClCompile Include="Date.cpp" />
+    <ClCompile Include="IView.cpp" />
     <ClCompile Include="MangaCorta.cpp" />
     <ClCompile Include="MangasLargas.cpp" />
-    <ClCompile Include="MangasTipo.cpp" />
     <ClCompile Include="Pantalon.cpp" />
     <ClCompile Include="PantalonNormal.cpp" />
     <ClCompile Include="Prenda.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Presentador.cpp" />
     <ClCompile Include="Tienda.cpp" />
     <ClCompile Include="Vendedor.cpp" />
   </ItemGroup>
